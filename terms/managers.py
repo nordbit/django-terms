@@ -41,7 +41,7 @@ class TermManager(Manager):
         """
         Caches variants_dict and replace_dict in a single database hit.
         """
-        qs = self.get_query_set()
+        qs = self.get_queryset()
 
         variants_dict = self._get_variants_dict(qs)
         cache.set(VARIANTS_DICT_CACHE_KEY, variants_dict)
