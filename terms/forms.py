@@ -18,6 +18,9 @@ if WIDGET == AVAILABLE_WIDGETS[2] or (WIDGET == AVAILABLE_WIDGETS[0]
 if WIDGET == AVAILABLE_WIDGETS[3] or (WIDGET == AVAILABLE_WIDGETS[0]
                                     and 'ckeditor' in settings.INSTALLED_APPS):
     from ckeditor.widgets import CKEditorWidget as Textarea  # 'ckeditor'
+if WIDGET == AVAILABLE_WIDGETS[4] or (WIDGET == AVAILABLE_WIDGETS[0]
+                                    and 'redactor' in settings.INSTALLED_APPS):
+    from redactor.widgets import RedactorEditor as Textarea  # 'redactor'
 
 
 class TermForm(ModelForm):

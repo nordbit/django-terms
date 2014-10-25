@@ -73,7 +73,7 @@ TERMS_IGNORED_IDS = frozenset(TERMS_IGNORED_IDS)
 #
 
 
-AVAILABLE_WIDGETS = ('auto', 'basic', 'tinymce', 'ckeditor')
+AVAILABLE_WIDGETS = ('auto', 'basic', 'tinymce', 'ckeditor', 'redactor')
 TERMS_DEFINITION_WIDGET = getattr(settings, 'TERMS_DEFINITION_WIDGET', 'auto')
 if TERMS_DEFINITION_WIDGET not in AVAILABLE_WIDGETS:
     raise Exception("unknown value '%s' for TERMS_DEFINITION_WIDGET "
